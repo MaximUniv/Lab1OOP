@@ -1,0 +1,89 @@
+body {
+	margin: 0;
+	font-family: Verdana, sans-serif;
+}
+
+.header {
+	display: flex;
+	position: sticky;
+	text-align: center;
+	box-shadow: 0 2px 8px #999;
+	height: 64px;
+	width: 100%;
+}
+.logo-block {
+	padding: 8px;
+	margin: 12px;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 8px;
+	box-shadow: 0 0 4px #999;
+}
+
+.content {
+	padding: 0 1% 0 1%;
+	width: 100%;
+	text-align: center;
+}
+
+.visualisation {
+	height: 100%;
+	width: 98%;
+}
+
+#visualisation {
+	width: 100%;
+}
+#visualisation circle {
+	stroke: black;
+}
+#visualisation text {
+	fill: black;
+	width: 100%;
+}
+
+.controls {
+	bottom: 0;
+}
+.explanation {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.explanation .explanation-text {
+	visibility: hidden;
+	width: 400px;
+	background-color: rgb(100, 100, 100);
+	color: #ffffff;
+	box-shadow: 0 2px 8px #999;
+	text-align: center;
+	padding: 4px 0;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+
+	top: 100%;
+	left: 50%;
+	margin-left: -200px;
+}
+.explanation .explanation-text::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%; /* At the top of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent rgb(72, 0, 238) transparent;
+}
+
+.explanation:hover .explanation-text {
+	visibility: visible;
+}
+.fctrl {
+	width: 25px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MAXIM K-23</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+	<div class="controls">
+
+		<div class="input-group mb-3">
+			<span class="input-group-text" id="inputGroup-sizing-default">Количество точек:</span>
+			<input id="count" type="number" value="10" placeholder="Grapth size">
+
+			<input class="btn btn-dark" type="button" value="Сгенерировать граф" onclick="GenerateGrid()">
+			<select style="height: 51px;" id="algo-type">
+				<option selected value="DFS">В глубину</option>
+				<option value="BFS">В глубину</option>
+				<option value="Dijkstra">Дейкстра</option>
+				<option value="A*">A*</option>
+				<option value="Prima">Прима</option>
+				<option value="2-sided Dijkstra" selected>Двунаправленный Дейкстра</option>
+				<option value="2-sided A*">Двунаправленный A*</option>
+			</select>
+			<input class="btn btn-dark" type="button" value="Построить путь" onclick="BuildPath()">
+		</div>
+		<div class="explanation">
+			-
+			<div class="explanation-text">
+				-
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="visualisation">
+			<svg id="visualisation" viewBox="0 0 1000 500" preserveAspectRatio="none">
+			</svg>
+		</div>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/algos.js"></script>
+	<script type="text/javascript" src="js/visual.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
